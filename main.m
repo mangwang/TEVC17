@@ -47,7 +47,7 @@ for d = 3
                 options = setOptions(options, 'AlgoName', algo_name, 'PopulationSize', 100, 'Dim', dim, 'PopInitRange', [lb, ub]);
             end
             
-            % set the limFEs to maxFEs/5
+            % set the samFEs to maxFEs/5
             options = setOptions(options, 'MaxFEs', options.MaxFEs / 5);
             
             % run an EA for online sampling
@@ -181,7 +181,7 @@ for d = 3
                 idx = find(bestFitSoFar == bestFitLast, 1);
                 usedFEs = FEsEachGen(idx);
                 
-                % set the unified FEs
+                % set the uniFEs
                 if bestFitLast < bestFitEachFunc  % best fitness value
                     bestFitEachFunc = bestFitLast;
                     unifiedFEs = usedFEs;
