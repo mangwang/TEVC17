@@ -24,7 +24,7 @@ nCalGens = length(evpAllGens);  % obtain the number of generations for calculati
 
 % path to save the figure
 saveVisPath = ['result', filesep, 'visulization', filesep, 'dim_', num2str(options.Dim),...
-    filesep, func_names{func_num}, filesep, 'run_', num2str(run_num_normal)];
+    filesep, func_names{func_num}];
 if ~isdir(saveVisPath)
     mkdir(saveVisPath);
 end
@@ -82,7 +82,7 @@ hold on;
 % plot median
 semilogy(ax4, FEsEachGen(1:nGens), bestFitMedPlot(1:nGens));
 legend({'mean', 'median'}, 'FontSize', 6, 'Location', 'best');
-xlabel('Function Evaluations');
+xlabel('The Number of FEs');
 ylabel('$log(f-f^*)$', 'interpreter', 'latex');
 grid on;
 

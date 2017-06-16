@@ -124,7 +124,8 @@ for i = 1:length(impIdx)
     numer = parentBestFitGlo(ig, impMat(ig, :)) - neighBestFit(ig, impMat(ig, :));
     % calculate denominator
     denom = parentFitStd(ig, impMat(ig, :));
-    denom(denom == 0) = eps;  % devide by zero correction
+%     denom(denom == 0) = eps;  % devide by zero correction
+    denom(denom < 1e-8) = 1e-8;  % revise the denominator if it is a small value (threshold is set to be 1e-8)
     eapAllGens(ig) = mean(numer ./ denom);
 end
 
