@@ -1,9 +1,9 @@
-### Source Code for Rerunning all the Experiments of my TEVC'17 Paper ###
+### Source Code for Running the Experiments of my TEVC'17 Paper ###
 
 
 1. The **_main.m_** file is the entry point to run all the experements;
 
-2. The first experiment is the visulization of generational measures with convergence curve. Note that the parameters _samFEs_ and _M_ are separately set to _maxFEs/5_ and _5_, which are slightly different from the paper;
+2. The first experiment is the visulization of generational measures with convergence curve. Note that the parameters _samFEs_ and _M_ are separately set to _maxFEs/5_ and _5_, which are slightly different with the original paper;
 
 3. The second experiment performs the algorithm selection task via the proposed framework based on the _evp(P_i)_ sequences. Note that the _uniFEs_ should be calculated before estimating the measures, while all the measures are already estimated in the first experiment, here we just reuse them again and unify the budget to _uniFEs_;
 
