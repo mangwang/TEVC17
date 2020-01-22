@@ -40,11 +40,11 @@ FEsEachGen = convStr.FEsEachGen;  % FEs
 
 % set global optimal to 0
 if func_num == 14
-    bestFitAvgPlot = bestFitAvg(1:(calGens+1));
-    bestFitMedPlot = bestFitMed(1:(calGens+1));
+    bestFitAvgPlot = bestFitAvg(1:(nCalGens+1));
+    bestFitMedPlot = bestFitMed(1:(nCalGens+1));
 else
-    bestFitAvgPlot = bestFitAvg(1:(calGens+1)) + 600 - 100 * (func_num - 1);
-    bestFitMedPlot = bestFitMed(1:(calGens+1)) + 600 - 100 * (func_num - 1);
+    bestFitAvgPlot = bestFitAvg(1:(nCalGens+1)) + 600 - 100 * (func_num - 1);
+    bestFitMedPlot = bestFitMed(1:(nCalGens+1)) + 600 - 100 * (func_num - 1);
 end
 avgIdx = find(bestFitAvgPlot == bestFitAvgPlot(end), 1);
 medIdx = find(bestFitMedPlot == bestFitMedPlot(end), 1);
